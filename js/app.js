@@ -38,11 +38,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
 
 
-  $stateProvider.state('app.help', {
-    url: '/help',
+  $stateProvider.state('app.settings', {
+    url: '/settings',
     views: {
-      help: {
-        templateUrl: 'help.html'
+      settings: {
+        templateUrl: 'templates/settings.html'
       }
     }
   })

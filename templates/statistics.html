@@ -1,0 +1,10 @@
+      <ion-view title="Статистики">
+        <ion-content>
+          <ion-list>
+            <ion-item ng-repeat="statistic in statistics" class="item item-icon-right" ui-sref="app.statistics.detail({statistic: $index})">
+              <span ng-class="{done: statistic.done}">{{statistic.title}}</span>
+              <i class="icon ion-ios7-arrow-right"></i>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-view>
