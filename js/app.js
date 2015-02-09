@@ -20,7 +20,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     }
   })
 
-    $stateProviderюstate('app.todos.index', {
+    $stateProvider.state('app.todos.index', {
     url: '',
     templateUrl: 'todos.html',
     controller: 'TodosCtrl'
