@@ -22,14 +22,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('app.todos.index', {
     url: '',
-    templateUrl: 'todos.html',
-    controller: 'TodosCtrl'
+    templateUrl: 'templates/statistics.html',
+    controller: 'StatisticsCtrl'
   })
 
   $stateProvider.state('app.todos.detail', {
     url: '/:todo',
-    templateUrl: 'todo.html',
-    controller: 'TodoCtrl',
+    templateUrl: 'templates/statistic.html',
+    controller: 'StatisticCtrl',
     resolve: {
       todo: function($stateParams, TodosService) {
         return TodosService.getTodo($stateParams.todo)
@@ -63,10 +63,10 @@ app.factory('TodosService', function() {
   }
 })
 
-app.controller('TodosCtrl', function($scope, TodosService) {
+app.controller('StatisticsCtrl', function($scope, TodosService) {
   $scope.todos = TodosService.todos
 })
 
-app.controller('TodoCtrl', function($scope, todo) {
+app.controller('StatisticCtrl', function($scope, todo) {
   $scope.todo = todo
 })
